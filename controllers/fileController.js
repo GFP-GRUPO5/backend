@@ -1,8 +1,7 @@
 import { unlink } from "fs";
-import { join } from "path";
 import multer, { diskStorage } from "multer";
+import { dirname, join } from "path";
 import { fileURLToPath } from "url";
-import { dirname } from "path";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -20,7 +19,7 @@ export const uploadFile = (req, res) => {
   if (!req.file) {
     return res.status(400).json({ error: "Nenhum arquivo enviado" });
   }
-  const fileUrl = `http://localhost:3001/uploads/${req.file.filename}`;
+  const fileUrl = `http://localhost:4001/uploads/${req.file.filename}`;
   res.json({ fileUrl });
 };
 

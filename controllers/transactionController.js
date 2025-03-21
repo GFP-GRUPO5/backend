@@ -7,6 +7,7 @@ export const getTransactions = (req, res) => {
 export const createTransaction = (req, res) => {
   const newTransaction = { id: transactions.length + 1, ...req.body };
   transactions.push(newTransaction);
+  console.log(transactions)
   res.status(201).json(newTransaction);
 };
 

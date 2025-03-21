@@ -1,6 +1,6 @@
-FROM node:22
+FROM node:20
 WORKDIR /bytebank/backend
 COPY . .
 RUN npm install
-EXPOSE 3001
-ENTRYPOINT node server.js
+EXPOSE 4001
+CMD ["node", "server.js"]

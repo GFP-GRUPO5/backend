@@ -1,5 +1,5 @@
 let account = {
-  fullName: "Usuária",
+  fullName: "Joana da Silva Oliveira",
   firstName: "Joana",
   balance: 2000,
   currency: "BRL",

@@ -11,7 +11,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 const app = express();
-const PORT = 3010;
+const PORT = 4001;
 
 app.use(cors());
 app.use(json());
@@ -24,5 +24,5 @@ app.use("/transactions", transaction);
 app.use('/investments', investment);
 
 app.listen(PORT, () => {
-  console.log(`Servidor rodando em http://localhost:${PORT}`);
+  console.log(`Servidor Goiba rodando em http://localhost:${PORT}`);
 });
